@@ -1,0 +1,19 @@
+[tool.poetry]
+description = "API for punch"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+package-mode = false
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "0.110.0"
+uvicorn = "0.28.1"
+sqlalchemy = "2.0.28"
+pydantic = "2.6.4"
+pydantic-settings = "2.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
