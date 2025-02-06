@@ -14,9 +14,9 @@ from .employees import get_employee_by_dni
 
 _punch = APIRouter()
 
-""" TODO: crear endpoint para obtener todos los punches con diversos filtros,
-    deberá crear casos de pruebas para que otro desaroollador lo pueda implementar
-    siguiendo las pruebas
+"""
+    crear endpoint para obtener todos los punches con diversos filtros sobre los campos de punch,
+    TODO: deberá crear casos de pruebas para que otro desarrollador lo pueda implementar siguiendo las pruebas
 """
 
 
@@ -31,6 +31,7 @@ async def create_punch(
     Si hay algun error o falta algun campo o algun elemento no se encuentra en la base de datos
     se debería agregar en campo status del Punch
     """
+
     employee = await get_employee_by_dni(data.dni, db)
     device = await get_device_by_id(data.dni, db)
 
